@@ -5,10 +5,11 @@ const router = express.Router();
 
 router.post("/login", userController.login);
 router.post("/register", userController.register);
-router.put("/get_detail_user/:id", userController.getDetailUser);
+router.put("/get-detail-user/:id", userController.getDetailUser);
 router.delete("/delete/:id", userController.deleteUser);
 router.post("/cart", verifyToken, userController.addToCart);
 router.get("/cart", verifyToken, userController.readCart);
 
 
 export default router;
+

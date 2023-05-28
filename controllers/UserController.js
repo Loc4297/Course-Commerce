@@ -12,6 +12,7 @@ const login = async (req, res) => {
   }
   const { email, password } = req.body;
   let user = await userRepository.login({ email, password });
+  console.log("🚀 ~ file: UserController.js:15 ~ login ~ user:", user);
   res.json({
     data: user,
   });
